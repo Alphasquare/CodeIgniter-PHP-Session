@@ -1,15 +1,8 @@
 <?php
 
-if(!defined('BASEPATH')) exit( 'No direct script access allowed' );
+class Session {
 
-class PHP_session {
-
-    public function __construct()
-    {
-        $this->start();
-    }
-
-    public function start()
+    public function start_session()
     {
         $session_name = 'session'; // Set a custom session name
         $secure = false; // Set to true if using https.
@@ -22,7 +15,7 @@ class PHP_session {
         if(!isset($_SESSION)) session_start();
     }
 
-    public function destroy()
+    public function session_destroy()
     {
         session_destroy();
     }
@@ -65,6 +58,12 @@ class PHP_session {
     public function set_flashdata($key, $value)
     {
         $this->set('flashdata_'.$key, $value);
+    }
+    
+    public function get_session_array() {
+        
+        return $_SESSION;
+        
     }
 
 }
