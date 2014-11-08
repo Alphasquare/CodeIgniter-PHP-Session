@@ -1,13 +1,7 @@
-CodeIgniter-PHP-Session
+Session
 =======================
 
-This is a library that helps you use PHP's built-in sessions in place of [CodeIgniter](http://codeigniter.com/)'s session class.
-
-**Note:** If you don't use CodeIgniter, some parts of the class probably won't make sense. You can fork this repository and modify it to use with a non-CodeIgniter project if you'd like.
-
-##Why?
-
-CodeIgniter's session class isn't the best because all of the session data is stored in a cookie. Browsers limit the amount of data cookies can store, and they're sent to the server with every request. PHP's native sessions store the data in temporary files on the server and set one small cookie with the session ID in it to identify users.
+I don't feel like writing docs right now so i'll leave the old docs intact. :D
 
 ##Features
 - Set multiple variables at once by passing an associative array.
